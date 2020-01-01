@@ -1,28 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:projet_annuel/pages/page_parameters.dart';
 
-class SecondScreen extends StatelessWidget {
+class SecondScreen extends StatefulWidget {
+  const SecondScreen({ Key key }) : super(key: key);
 
-  void schoolPage(BuildContext context) {
-    Navigator.push(
-        context, new MaterialPageRoute(builder: (BuildContext context) {
-      return new PageParameters("Paramètres");
-    }));
-  }
+  @override
+  _SecondScreenState createState() => _SecondScreenState();
+}
 
+class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
       child: new Center(
-        child:  Container(
-          padding: EdgeInsets.all(20),
-          child: TextField(
-            decoration:
-            new InputDecoration(
-              labelText: "Recherchez une université",
+          child:  Container(
+            padding: EdgeInsets.all(20),
+            child: TextField(
+              decoration:
+              new InputDecoration(
+                labelText: "Recherchez une université",
+              ),
             ),
-          ),
-        )
+          )
       ),
     );
   }
